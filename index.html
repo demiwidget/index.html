@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Test Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    h1 {
+      color: #0078d4; /* Microsoft Azure blue */
+    }
+    p {
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Azure Test Website</h1>
+    <p>If you can see this, your Azure deployment works!</p>
+    <p>Time: <span id="time"></span></p>
+  </div>
+
+  <script>
+    function updateTime() {
+      document.getElementById("time").textContent = new Date().toLocaleString();
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
